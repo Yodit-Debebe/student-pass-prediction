@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Pass/Fail Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🎓 Student Pass/Fail Prediction</h2>
+    <p class="subtitle">Enter student details and choose a model</p>
+
+    <div class="card">
+        <label>Choose Model</label>
+        <select id="model">
+            <option value="logistic">Logistic Regression</option>
+            <option value="tree">Decision Tree</option>
+        </select>
+
+        <div class="grid">
+            <div>
+                <label>School</label>
+                <input id="school" value="GP">
+            </div>
+
+            <div>
+                <label>Sex</label>
+                <select id="sex">
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Age</label>
+                <input type="number" id="age" value="18">
+            </div>
+
+            <div>
+                <label>Study Time (1–4)</label>
+                <input type="number" id="studytime" value="3">
+            </div>
+
+            <div>
+                <label>Failures</label>
+                <input type="number" id="failures" value="0">
+            </div>
+
+            <div>
+                <label>Absences</label>
+                <input type="number" id="absences" value="4">
+            </div>
+
+            <div>
+                <label>G1</label>
+                <input type="number" id="G1" value="14">
+            </div>
+
+            <div>
+                <label>G2</label>
+                <input type="number" id="G2" value="15">
+            </div>
+        </div>
+
+        <button id="predictBtn">Predict Result</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
