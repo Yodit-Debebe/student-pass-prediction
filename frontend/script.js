@@ -1,5 +1,7 @@
 document.getElementById("predictBtn").addEventListener("click", predict);
 
+const API_BASE = "https://student-pass-backend.onrender.com"; 
+
 function predict() {
     const model = document.getElementById("model").value;
 
@@ -38,7 +40,7 @@ function predict() {
         G2: Number(document.getElementById("G2").value)
     };
 
-    fetch(`http://127.0.0.1:8000/predict/${model}`, {
+    fetch(`${API_BASE}/predict/${model}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
